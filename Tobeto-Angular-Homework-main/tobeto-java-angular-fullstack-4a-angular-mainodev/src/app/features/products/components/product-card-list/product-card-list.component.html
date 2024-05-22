@@ -1,0 +1,12 @@
+<div class="d-flex flex-wrap gap-4">
+  @for (product of productList; track $index) {
+  <app-card
+    [title]="product.name | uppercase"
+    [imageSrc]="product.imageUrl"
+    [imageAlt]="product.name"
+    [description]="product.quantityPerUnit"
+    [buttonLabel]="'View - ' + (product.unitPrice | appVat : 0.19 | currency)"
+    (buttonClick)="onViewProduct(product)"
+  ></app-card>
+  }
+</div>

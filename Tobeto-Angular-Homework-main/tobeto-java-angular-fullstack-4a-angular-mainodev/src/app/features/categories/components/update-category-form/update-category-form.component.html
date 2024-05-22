@@ -1,0 +1,16 @@
+<div class="row border m-0 p-3 mb-4" *ngIf="selectedCategoryId">
+    <div class="col-md-2">
+    
+    </div>
+    <div class="col-md-10">
+        <h5 class="card-title">
+            {{ selectedCategoryId.name }}
+        </h5>
+        <p class="card-text">
+            {{ selectedCategoryId.description }}
+        </p>
+        <button (click)="updateDetails()" class="btn btn-danger btn-sm">Submit</button>
+      
+    </div>
+
+</div>

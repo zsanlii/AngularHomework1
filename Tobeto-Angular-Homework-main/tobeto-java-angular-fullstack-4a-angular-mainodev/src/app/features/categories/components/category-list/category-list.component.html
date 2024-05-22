@@ -1,0 +1,18 @@
+
+  <table class="table  table-bordered table-lightblue table-hover mx-5 my-5 w-50">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let category of categories">
+        <td>{{ category.name }}</td>
+        <td>{{ category.description }}</td>
+        <button class="btn btn-danger btn-sm mt-4 me-md-2 "(click)="updateCategory(category.id)">Edit</button>
+        <button class="btn btn-primary  btn-sm mt-4" (click)="deleteCategory(category.id)">Delete</button>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-primary  btn-lg mt-4" (click)="addCategory()">Add</button>

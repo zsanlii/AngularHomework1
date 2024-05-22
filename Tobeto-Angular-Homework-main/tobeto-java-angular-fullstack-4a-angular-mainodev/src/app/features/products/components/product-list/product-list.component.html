@@ -1,0 +1,30 @@
+<table class="table  table-bordered table-lightblue table-hover mx-5 my-5 w-50">
+    <thead>
+      <tr> 
+        <th scope="col">Name</th>
+        <th scope="col">imageUrl</th>
+        <th scope="col">quantityPerUnit</th>
+        <th scope="col">unitPrice</th>
+        <th scope="col">unitsInStock</th>
+        <th scope="col">unitsOnOrder</th>
+        <th scope="col">reorderLevel</th>
+        <th scope="col">discontinued</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.name }}</td>
+        <td>{{ product.imageUrl }}</td>
+        <td>{{ product.quantityPerUnit }}</td>
+        <td>{{ product.unitPrice }}</td>
+        <td>{{ product.unitsInStock }}</td>
+        <td>{{ product.unitsOnOrder }}</td>
+        <td>{{ product.reorderLevel }}</td>
+        <td>{{ product.discontinued }}</td>
+        <button class="btn btn-danger btn-sm mt-4 me-md-2 "(click)="updateProduct(product.id)">Edit</button>
+        <button class="btn btn-primary  btn-sm mt-4" (click)="deleteProduct(product.id)">Delete</button>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-primary  btn-lg mt-4" (click)="addProduct()">Add</button>
